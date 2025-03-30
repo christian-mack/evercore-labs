@@ -9,8 +9,7 @@ export default function Home() {
       <header className="border-b border-gray-200">
         <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <div className="font-bold text-xl">Positivus</div>
-            <span className="bg-[#b9ff66] text-black text-xs px-2 py-0.5 rounded">Free</span>
+            <div className="font-bold text-xl">Evercore Labs</div>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <Link href="#" className="text-sm font-medium">
