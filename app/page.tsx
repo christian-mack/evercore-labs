@@ -1,97 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import heroImage from "@/public/hero-image.svg"
+import { Header } from "@/components/organisms/Header"
+import { HeroSection } from "@/components/molecules/HeroSection"
+import { ServicesGrid } from "@/components/organisms/ServicesGrid"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b border-gray-200">
-        <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
-          <div className="flex items-center gap-2">
-            <div className="font-bold text-xl">Evercore Labs</div>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="#" className="text-sm font-medium">
-              About us
-            </Link>
-            <Link href="#" className="text-sm font-medium">
-              Services
-            </Link>
-            <Link href="#" className="text-sm font-medium">
-              Use cases
-            </Link>
-            <Link href="#" className="text-sm font-medium">
-              Pricing
-            </Link>
-            <Link href="#" className="text-sm font-medium">
-              Blog
-            </Link>
-          </div>
-          <div>
-            <Button className="bg-[#b9ff66] text-black hover:bg-[#a8e85c] rounded-md">Contact us</Button>
-          </div>
-        </div>
-      </header>
+      <Header />
+      <HeroSection heroImage={heroImage} />
+      <ServicesGrid />
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Navigating the digital landscape for success
-              </h1>
-              <p className="text-lg mb-8 text-gray-700">
-                Positivus helps businesses of all sizes navigate the digital landscape and achieve their marketing
-                goals.
-              </p>
-              <Button className="bg-black text-white hover:bg-gray-800 rounded-md">Get Started</Button>
-            </div>
-            <div className="relative h-[300px] md:h-[400px]">
-              <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Digital marketing illustration"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 bg-black text-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="border border-gray-800 rounded-lg p-6 hover:border-[#b9ff66] transition-colors"
-              >
-                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-400 mb-6">{service.description}</p>
-                <Link href="#" className="flex items-center text-[#b9ff66] font-medium">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 ml-2"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Case Studies */}
       <section className="py-16 md:py-24">
