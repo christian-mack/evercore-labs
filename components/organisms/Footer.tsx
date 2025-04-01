@@ -69,7 +69,7 @@ export function Footer() {
         <div className="flex justify-between gap-8 mb-16">
           {/* Contact Information */}
           <div className="max-w-md">
-            <div className="inline-block bg-[#B9FF66] text-black px-4 py-1 rounded-full mb-6">
+            <div className="inline-block bg-[#B9FF66] text-black px-2 py-1 rounded-md mb-6">
               Contact us:
             </div>
             <div className="space-y-2 text-lg">
@@ -97,7 +97,7 @@ export function Footer() {
 
         {/* Copyright and Privacy */}
         <div className="flex justify-between items-center pt-8 border-t border-white/20">
-          <p>© 2023 Evercore Labs. All Rights Reserved.</p>
+          <p>© 2025 Evercore Labs. All Rights Reserved.</p>
           <Link href="/privacy-policy" className="hover:text-[#B9FF66] transition-colors">
             Privacy Policy
           </Link>
