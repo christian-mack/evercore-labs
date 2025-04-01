@@ -31,7 +31,7 @@ const ServiceCard = ({ title, icon, variant, styleOverrides = {} }: ServiceCardP
     <div className={`${bgColor} rounded-[45px] p-8 relative min-h-[250px] grid grid-cols-2 gap-4 border border-black border-b-[5px]`}>
       <div className="flex flex-col justify-between">
         <div className="inline-flex">
-          <h3 className={`text-xl font-medium text-black ${titleBgColor} px-4 py-2 rounded-md whitespace-nowrap`}>{title}</h3>
+          <h3 className={`text-xl font-medium text-black ${titleBgColor} px-2 py-2 rounded-md whitespace-nowrap`}>{title}</h3>
         </div>
         <Link 
           href="/services" 
