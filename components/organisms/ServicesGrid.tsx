@@ -136,7 +136,7 @@ export function ServicesGrid() {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="flex items-center gap-8 mb-24">
-          <h2 className="text-2xl font-bold bg-[#B9FF66] px-2 py-2 rounded-sm shrink-0">Services</h2>
+          <h2 className="text-3xl font-medium bg-[#B9FF66] px-2 py-2 rounded-sm shrink-0">Services</h2>
           <p className="text-lg text-gray-700 max-w-[40%]">
             At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
           </p>

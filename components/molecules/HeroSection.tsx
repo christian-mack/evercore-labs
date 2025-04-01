@@ -18,7 +18,7 @@ export function HeroSection({ heroImage }: HeroSectionProps) {
             <p className="text-lg mb-8 text-gray-700">
               Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
             </p>
-            <Button className="bg-black text-white hover:bg-gray-800 rounded-md">
+            <Button className="bg-black text-white hover:bg-gray-800 rounded-2xl text-lg p-8 font-light">
               Book a discovery call
             </Button>
           </div>

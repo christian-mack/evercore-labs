@@ -5,6 +5,7 @@ import { CTASection } from "@/components/molecules/CTASection"
 import { CaseStudies } from "@/components/organisms/CaseStudies"
 import { WorkingProcess } from "@/components/organisms/WorkingProcess"
 import heroImage from "@/public/hero-image.svg"
+import { Team } from "@/components/organisms/Team"
 
 export default function MarketingHome() {
   return (
@@ -14,6 +15,7 @@ export default function MarketingHome() {
       <CTASection />
       <CaseStudies />
       <WorkingProcess />
+      <Team />
     </>
   )
 } 

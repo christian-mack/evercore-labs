@@ -40,7 +40,7 @@ export function CaseStudies() {
     <section className="container mx-auto px-4 py-16">
       <div className="flex items-start gap-8 mb-20">
         <div className="bg-[#B9FF66] px-2 py-2 rounded-md">
-          <h2 className="text-2xl font-medium">Case Studies</h2>
+          <h2 className="text-3xl font-medium">Case Studies</h2>
         </div>
         <p className="text-xl max-w-[50%]">
           Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies
