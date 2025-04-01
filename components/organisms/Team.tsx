@@ -83,7 +83,7 @@ export function Team() {
 
             <div className="flex items-end gap-6 mb-6">
               <div className="relative w-24 h-24 flex-shrink-0">
-                <div className="absolute inset-0 bg-[#B9FF66] rounded-full transform rotate-45" />
+                <div className="absolute inset-0 bg-[#B9FF66] rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]" />
                 <div className="absolute inset-0 overflow-hidden rounded-full">
                   <Image
                     src={member.image}
@@ -110,9 +110,12 @@ export function Team() {
       </div>
 
       <div className="flex justify-end mt-8">
-        <button className="bg-[#1D1D1D] text-white px-8 py-4 rounded-full text-lg">
+        <Link 
+          href="/about"
+          className="bg-[#1D1D1D] text-white px-8 py-4 rounded-full text-lg hover:bg-[#2D2D2D] transition-colors"
+        >
           See all team
-        </button>
+        </Link>
       </div>
     </section>
   )
