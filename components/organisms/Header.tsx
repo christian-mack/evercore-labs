@@ -32,7 +32,7 @@ export function Header({
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-gray-200">
+    <header className="bg-white">
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
         <div className="flex items-center gap-2">
           <Link 

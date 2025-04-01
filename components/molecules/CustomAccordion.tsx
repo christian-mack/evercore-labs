@@ -1,10 +1,25 @@
+'use client';
+
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { cn } from "@/lib/utils"
 
-const CustomAccordion = AccordionPrimitive.Root
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-const CustomAccordionItem = React.forwardRef<
+interface CustomAccordionProps {
+  items?: FAQItem[];
+  children?: React.ReactNode;
+  type?: "single";
+  defaultValue?: string;
+  collapsible?: boolean;
+}
+
+const CustomAccordionRoot = AccordionPrimitive.Root;
+
+export const CustomAccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
@@ -22,7 +37,7 @@ const CustomAccordionItem = React.forwardRef<
 ))
 CustomAccordionItem.displayName = "CustomAccordionItem"
 
-const CustomAccordionTrigger = React.forwardRef<
+export const CustomAccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
@@ -30,7 +45,7 @@ const CustomAccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-12 px-12 text-xl font-medium transition-all bg-[#F3F3F3] rounded-[3rem] [&[data-state=open]]:bg-[#B9FF66] [&[data-state=open]>.plus-minus]:rotate-45 [&[data-state=open]]:rounded-b-none",
+        "flex flex-1 items-center justify-between py-12 px-12 text-2xl font-medium transition-all bg-[#F3F3F3] rounded-[3rem] [&[data-state=open]]:bg-[#B9FF66] [&[data-state=open]>.plus-minus]:rotate-45 [&[data-state=open]]:rounded-b-none",
         className
       )}
       {...props}
@@ -44,7 +59,7 @@ const CustomAccordionTrigger = React.forwardRef<
 ))
 CustomAccordionTrigger.displayName = "CustomAccordionTrigger"
 
-const CustomAccordionContent = React.forwardRef<
+export const CustomAccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
@@ -83,4 +98,27 @@ function Plus({ className }: { className?: string }) {
   )
 }
 
-export { CustomAccordion, CustomAccordionItem, CustomAccordionTrigger, CustomAccordionContent } 
+export function CustomAccordion({ items, children, type = "single", defaultValue, collapsible = true }: CustomAccordionProps) {
+  if (items) {
+    return (
+      <CustomAccordionRoot type={type} defaultValue={defaultValue} collapsible={collapsible}>
+        {items.map((item, index) => (
+          <CustomAccordionItem key={index} value={`item-${index}`}>
+            <CustomAccordionTrigger>
+              {item.question}
+            </CustomAccordionTrigger>
+            <CustomAccordionContent>
+              {item.answer}
+            </CustomAccordionContent>
+          </CustomAccordionItem>
+        ))}
+      </CustomAccordionRoot>
+    );
+  }
+
+  return (
+    <CustomAccordionRoot type={type} defaultValue={defaultValue} collapsible={collapsible}>
+      {children}
+    </CustomAccordionRoot>
+  );
+} 
