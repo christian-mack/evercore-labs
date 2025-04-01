@@ -59,7 +59,7 @@ export function Team() {
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="flex items-center gap-8 mb-12">
-        <div className="bg-[#B9FF66] px-6 py-2 rounded-[3rem]">
+        <div className="bg-[#B9FF66] px-2 py-2 rounded-md ">
           <h2 className="text-3xl font-medium">Team</h2>
         </div>
         <p className="text-xl max-w-[40%]">
