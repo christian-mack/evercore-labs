@@ -1,7 +1,24 @@
+import { AboutHero } from "@/components/organisms/AboutHero";
+import { CoreValues } from "@/components/organisms/CoreValues";
+import { AboutQuote } from "@/components/organisms/AboutQuote";
+import { AwardsRecognition } from "@/components/organisms/AwardsRecognition";
+import { ImpactNumbers } from "@/components/organisms/ImpactNumbers";
+import { Journey } from "@/components/organisms/Journey";
+import { JoinTeam } from "@/components/organisms/JoinTeam";
+
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-8">About Us</h1>
-    </div>
-  )
+    <main>
+      <AboutHero />
+      <ImpactNumbers />
+      <Journey />
+      <CoreValues
+        subtitleStart="At the heart of everything we do"
+        subtitleEnd="are our core values:"
+      />
+      <AboutQuote />
+      <AwardsRecognition />
+      <JoinTeam />
+    </main>
+  );
 } 
